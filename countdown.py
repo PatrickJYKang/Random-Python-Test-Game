@@ -89,6 +89,11 @@ print(listletters)
 #functions
 def check(word):
     if word in word_list:
+    	for j in word:
+    		if j not in listletters:
+    			print(word+" doesn't work")
+    		else:
+    			print("OK")
     	print("OK")
     else:
     	print(word+" is an invalid word")
@@ -107,9 +112,6 @@ def countdown(t):
 #timer
 print("Start")
 countdown(2)
-for i in range (1, 9):
-    listletters.append("")
-    i = i + 1
 
 while True:
     wordtbchecked = input("Word: ")
