@@ -13,7 +13,8 @@ for a in word_list2:
 	word_list.append(a.rstrip(a[-1]))
 print(word_list)
 print("Countdown")
-listletters = []
+oldlist = []
+newlist=[]
 print("Enter v or c")
 
 
@@ -80,30 +81,37 @@ for i in range (1, 10):
             nextletter = "y"
         elif vowel == 21:
             nextletter = "z"
-    listletters.append(nextletter)
-    print(listletters)
+    oldlist.append(nextletter)
+    print(oldlist)
     i = i + 1
-print(listletters)
+print(oldlist)
+
+
 
 
 #functions
 def check(word):
+
+    newlist=oldlist
     if word in word_list:
     	for j in word:
-    		if j not in listletters:
-    			print(word+" doesn't work")
+    		if j not in newlist:
+    			print(word+" doesn't work, "+j+" is not in the list of letters")
+    			break
     		else:
     			print("OK")
-    	print("OK")
+    			newlist.remove(j)
+    	
     else:
     	print(word+" is an invalid word")
+    print(newlist)
                                    
 def word_input():
     wordtbchecked = input()
     check(wordtbchecked)
 def countdown(t):
     while t > 0:
-        print(listletters)
+        print(oldlist)
         print(t)
         t = t - 1
         time.sleep(1)
