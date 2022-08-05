@@ -1,17 +1,20 @@
 #imports
 import random
 import time
-f = open("words_alpha.txt", "r")
-word_list = f.readlines()
-
+f = open("/home/patrick/Documents/GitHub/Random-Python-Test-Game/words_alpha.txt", "r")
+word_list2 = f.readlines()
+word_list=[]
 
 
 
 
 #setup
+for a in word_list2:
+	word_list.append(a.rstrip(a[-1]))
+print(word_list)
 print("Countdown")
 listletters = []
-
+print("Enter v or c")
 
 
 
@@ -112,4 +115,4 @@ while True:
     wordtbchecked = input("Word: ")
     if wordtbchecked == ".":
         break
-    check(wordtbchecked)
+    check(wordtbchecked.lower())
