@@ -1,9 +1,7 @@
 # Random Python Test Game
  Just testing GitHub
- Now just want to test the commit thing.
- I'm new.
-
  I made this game a year ago and I just uploaded it onto GitHub
+ Works with Python 3, I have not tried with Python 2.
 
  # It's a work in progress
  It does not work, and if you try to play it it will annoy you
